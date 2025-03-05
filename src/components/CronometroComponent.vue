@@ -7,6 +7,9 @@ defineProps<{
   runningTimer: boolean
 }>()
 
+
+const emits = defineEmits(['timerFinished'])
+
 const seconds = ref(0)
 const isRunningTimer = ref(false)
 
@@ -25,6 +28,8 @@ const stopTimer = () => {
     clearInterval(timer)
     timer = undefined
     isRunningTimer.value = false
+    emits('timerFinished', seconds.value)
+    seconds.value = 0
   }
 }
 
