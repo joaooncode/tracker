@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import BarraLateralComponent from '../components/BarraLateralComponent.vue'
+import FormularioComponent from '../components/FormularioComponent.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="flex">
+    <div class="w-1/5">
+      <BarraLateralComponent />
+    </div>
+    <div class="w-4/5">
+      <FormularioComponent />
+    </div>
   </main>
 </template>
